@@ -1,0 +1,5 @@
+<div class="content">
+    <app-current-password [value]="currentPassword?.value"></app-current-password>
+    <app-new-password (myPasswordEvent)="setMyPassword($event)" *ngIf="!myPassword" class="full-width"></app-new-password>
+    <app-my-password (deletePasswordEvent)="deletePassword()" [myPassword]="myPassword" *ngIf="myPassword" class="full-width"></app-my-password>
+</div>
