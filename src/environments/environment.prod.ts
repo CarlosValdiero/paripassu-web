@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  urlApi: 'https://paripassu-api.herokuapp.com'
+  urlApi: 'http://localhost:8080'
 };
