@@ -7,13 +7,13 @@
   - npm start
 
 ### Funcionalidades gerente
-  - acessar /admin
-  - funções: 
+  - Acessar /admin
+  - Funções: 
     - Próxima senha
     - Reiniciar
 
 ### Funcionalidades gerente
-  - acessar /home
-  - funções: 
+  - Acessar /home
+  - Funções: 
     - Pegar senha
     - Descartar senha (X)
