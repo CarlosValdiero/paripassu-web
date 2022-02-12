@@ -16,4 +16,9 @@
   - Acessar /home
   - Funções: 
     - Pegar senha
-    - Descartar senha (X)
+    - Descartar senha
+
+
+### Link da aplicação
+
+https://paripassu-web.vercel.app/
