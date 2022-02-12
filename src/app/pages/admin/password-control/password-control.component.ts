@@ -18,7 +18,7 @@ export class PasswordControlComponent implements OnInit {
   nextPassword(): void {
     this.passwordService.nextPassword().subscribe({
       next: (data) => {
-        alert("sucesso próxima senha")
+        console.log("sucesso próxima senha")
       },
       error: (e) => {
         console.log("deu ruim")
@@ -29,7 +29,7 @@ export class PasswordControlComponent implements OnInit {
   resetSequencia(): void {
     this.passwordService.resetSequence().subscribe({
       next: (data) => {
-        alert("sucesso reiniciar")
+        console.log("sucesso reiniciar")
       },
       error: (e) => {
         console.log("deu ruim")
