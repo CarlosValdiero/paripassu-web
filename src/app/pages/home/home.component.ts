@@ -56,6 +56,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       && this.currentPassword?.uuidSequence 
       && this.myPassword.uuidSequence != this.currentPassword.uuidSequence) {
         this.localStorageService.clearMyPassword();
+        this.myPassword = undefined;
     }
   }
 
