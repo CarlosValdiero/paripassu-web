@@ -1,8 +1,7 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 import * as Stomp from 'stompjs';
-import * as SockJS from 'sockjs-client';
 
 import { environment } from 'src/environments/environment';
 import { Observable, Subscription } from 'rxjs';
@@ -12,7 +11,7 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class WebSocketService {
 
-    private serverUrl = environment.urlApi + '/websockets';
+    private serverUrl = environment.urlApi.replace("https","wss").replace("http","ws") + '/websockets';
     private stompClient?: Stomp.Client;
     private socket: WebSocket;
     private interval: any;
@@ -22,13 +21,13 @@ export class WebSocketService {
     private subjectCurrentPassword = new Subject<any>();
 
     constructor( ) {
-        this.socket = SockJS(this.serverUrl);
+        this.socket = new WebSocket(this.serverUrl );
         this.initializeWebSocketConnection();
      }
 
     initializeWebSocketConnection() {
         if(!this.stompClient || !this.stompClient.connected) {
-            this.socket = SockJS(this.serverUrl);
+            this.socket = new WebSocket(this.serverUrl );
             this.stompClient = Stomp.over(this.socket);
             this.stompClient.debug = () => {};
             this.stompClient.connect( {} ,
