@@ -34,7 +34,7 @@ export class NewPasswordComponent {
         this.myPasswordEvent.emit(data);
       },
       error: (e) => {
-        console.log("deu ruim")
+        alert("Ocorreu um erro ao solicitar nova senha!")
       } 
     });
   }

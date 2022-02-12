@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.setCurrentPassword(data);
       },
       error: (e) => {
-        console.log("deu ruim")
+        alert("Ocorreu um erro ao buscar senha atual!")
       } 
     });
   }

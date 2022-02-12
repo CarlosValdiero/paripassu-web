@@ -36,7 +36,7 @@ export class AdminComponent implements OnInit, OnDestroy {
         this.currentPassword = data;
       },
       error: (e) => {
-        console.log("deu ruim")
+        alert("Ocorreu um erro ao buscar senha atual!")
       } 
     });
   }

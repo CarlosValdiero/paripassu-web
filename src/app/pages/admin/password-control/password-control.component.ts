@@ -21,7 +21,7 @@ export class PasswordControlComponent implements OnInit {
         console.log("sucesso próxima senha")
       },
       error: (e) => {
-        console.log("deu ruim")
+        alert("Ocorreu um erro ao solicitar próxima senha!")
       } 
     });
   }
@@ -32,7 +32,7 @@ export class PasswordControlComponent implements OnInit {
         console.log("sucesso reiniciar")
       },
       error: (e) => {
-        console.log("deu ruim")
+        alert("Ocorreu um erro ao reiniciar senhas!")
       } 
     });
   }
