@@ -33,11 +33,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   getCurrentPassword(): void {
     this.passwordService.getCurrentPassword().subscribe({
       next: (data) => {
-        if(data) {
-          this.currentPassword = data;
-        } else {
-          this.currentPassword = new PasswordDTO();
-        }
+        this.currentPassword = data;
       },
       error: (e) => {
         console.log("deu ruim")
