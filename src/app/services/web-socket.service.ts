@@ -11,7 +11,7 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class WebSocketService {
 
-    private serverUrl = environment.urlApi.replace("https","wss").replace("http","ws") + '/websockets';
+    private serverUrl = environment.urlApi.replace("https","ws").replace("http","ws") + '/websockets';
     private stompClient?: Stomp.Client;
     private socket: WebSocket;
     private interval: any;
